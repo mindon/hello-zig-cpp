@@ -5,11 +5,13 @@ based on <https://github.com/anagram3k/zig-with-cpp>
 
 1. using a c++ lib, a binding.cpp and binding.h should be appended to build the lib;
 2. binding.h should be installed
-3. use ```zig
+3. use
+```zig
 const c = @cImport({
-    @cInclude("xlib/binding.h");
+    @cInclude("xlib/binding.h"); // the binding.h installed path
 });
-``` in zig, and call binding things with c.*
+```
+in zig, and call binding things with c.*
 
 
 `zig build run`
