@@ -28,6 +28,7 @@ pub fn build(b: *std.Build) void {
             "binding.cpp",
             "hello.cpp",
         },
+        .flags = &.{"-DNDEBUG=1"},
     });
     xlib.installHeader(b.path("vendor/xlib/binding.h"), "xlib/binding.h");
     b.installArtifact(xlib);
